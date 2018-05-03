@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰 | Seeking good practices</title>
+<meta name="generator" content="Jekyll v3.8.1" />
+<meta property="og:title" content="웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰" />
+<meta name="author" content="Hyounggap An" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다." />
+<meta property="og:description" content="머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다." />
+<meta property="og:site_name" content="Seeking good practices" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-05-07T00:00:00+09:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Hyounggap An"},"mainEntityOfPage":{"@type":"WebPage","@id":"/2017/05/07/python-scraping.html"},"description":"머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.","@type":"BlogPosting","dateModified":"2017-05-07T00:00:00+09:00","datePublished":"2017-05-07T00:00:00+09:00","headline":"웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰","url":"/2017/05/07/python-scraping.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Seeking good practices" /><script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73592063-3', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Seeking good practices</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/tags/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-05-07T00:00:00+09:00" itemprop="datePublished">2017 May 7
+      </time><div class="post-tags">
+  <i class="fa fa-tags" aria-hidden="true"></i>
+  
+  
+  <a href="/tags/#book review">book review</a>
+  
+</div>
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/assets/img/파이썬으로-웹-크롤러-만들기-1.jpg" alt="파이썬으로 웹 크롤러 만들기 책" class="scale-with-grid-center" /></p>
+
+<p>최근에 미니 프로젝트로 생각해 둔 것이 있었는데, 매일 뉴스 기사에서 단어를 수집할 필요가 있었다. 그리고 파이썬으로 프로젝트를 해보고 싶은 생각도 있었는데 마침 필요한 것들이 전부 있는 책이 손에 들어왔다. HTML파싱에 필요한 라이브러리부터 문서 포맷 파싱, 자연어처리, 이미지 인식, 유닛 테스트까지 다루지 않는 부분이 없는 엄청난 책이었다. 전문서를 읽으면서 가끔 묘한 느낌이 들 때가 있는데 이 책이 그랬다. 책의 두께로만 봐서는 도저히 각 챕터를 전부 다룰 수 없을 것 같은데 정말 그렇게 하고 있었다. 초보자의 관점에서 본 이야기이고, 어떤 챕터는 한 권의 책으로 심층적으로 다뤄도 모자랄 것이다. 하지만 어떤 노하우나 기술의 ‘힌트’를 적절히 배치해놓은 것을 보고 감탄하지 않을 수 없었다. 그런 점에서 이 책은 웹 프로그래밍을 막 시작한 분들에게 굉장히 매력적인 책일 것이다.</p>
+
+<p><img src="/assets/img/파이썬으로-웹-크롤러-만들기-2.jpg" alt="데이터베이스 테크닉과 모범 사례" class="scale-with-grid-center" /></p>
+
+<p>5장에서는 관계형 데이터베이스에서 자료를 저장하는 스키마 설계에 대해 고민하게 하는 한편, 성능적인 면에서 쿼리 응답을 빠르게 하기 위한 인덱싱기술도 설명하고 있다.</p>
+
+<p>책이 다양한 주제에 대해서 다루고 있다보니 원하는 챕터만 찾아봐야겠다고 다짐했다. 그래서 처음에 6장은 넘어가려고 했다. 그런데 웬걸 텍스트 인코딩에 대해 설명을 하고 있어서 읽다보니 한 챕터 전체를 다 읽게 되었다. 텍스트 인코딩에 대한 개괄적 설명, csv, pdf, docx 포맷에서 데이터를 추출하는 방법이 차례로 나온다. 책을 읽는 순서는 관계가 없지만 초보자는 유용한 내용이 많으니 웬만하면 모두 읽는 것이 좋을 것 같다.</p>
+
+<p><img src="/assets/img/파이썬으로-웹-크롤러-만들기-3.jpg" alt="텍스트 인코딩과 인터넷" class="scale-with-grid-center" /></p>
+
+<p>데스크탑으로 맥을 쓰면서 멀웨어나 바이러스와는 많이 멀어졌다고 생각했는데 간과한 부분이 있었다. <a href="https://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Public_servers_on_the_Internet">위키</a>의 유닉스 계열 서버의 점유율을 보면 가장 낮은 것도 60퍼센트를 넘는다. 크롤링을 잘못하면 저자의 말대로 악성코드를 내 컴퓨터로 초대하는 것이나 다름없다. 방어적 프로그래밍을 일깨워주는 참 좋은 책이다… 그리고 이런 ‘주의’표시가 있는 내용이 챕터 마다 있어서 책을 읽고 많이 배울 수 있었다.</p>
+
+<p><img src="/assets/img/파이썬으로-웹-크롤러-만들기-4.jpg" alt="악의적 스크립트 주의하기" class="scale-with-grid-center" /></p>
+
+<p>웹 사이트를 돌아다니면서 법적 이슈가 생길 거라고 예상하는 사람이 없으니, 크롤링을 하는 것도 법적인 이슈가 없을 것이라고 예상했다. 그런 점에서 저자가 윤리적인 이슈 및 법적 이슈가 생길 수 있음을 경고해주고, 실제 사례도 소개해주고 있어서 흥미롭게 읽을 수 있었다.</p>
+
+<p><img src="/assets/img/파이썬으로-웹-크롤러-만들기-5.jpg" alt="스크레이핑의 윤리" class="scale-with-grid-center" /></p>
+
+<p><em>curl</em> 커맨드를 이용해서 HTTP 리퀘스트를 보낼 때 실패하는 사이트들이 있었는데 그 때는 어떤 정보를 통해서 확인하는지 몰랐었다. 이런 노하우를 배우다보니 내가 아직도 웹에 대해서 모르는게 굉장히 많다는 생각이 들었다…</p>
+
+<p><img src="/assets/img/파이썬으로-웹-크롤러-만들기-6.jpg" alt="헤더를 유용하게 사용하는 방법" class="scale-with-grid-center" /></p>
+
+<p>코딩 컨벤션에 대해 잠깐 언급하고 리뷰를 마치고자 한다. 이전에는 파이썬을 간단히 로직 테스트 용도로만 사용했었다. 그래서 크게 긴 코드를 작성할 일이 없었다. 파이썬 코딩 컨벤션도 딱히 따르는 것이 없었는데 저자의 코드를 따라서 실습하다보니 홑따옴표와 쌍따옴표를 혼용해서 쓰고 있었다. 책에 파이썬 코딩 컨벤션에 대한 언급은 없기 때문에 <a href="http://stackoverflow.com/questions/56011/single-quotes-vs-double-quotes-in-python">스택오버플로우</a>에서 관련된 내용을 찾아봤다. 기본적으로 이 논의는 가치가 없는 것(…)으로 보이지만, 참고할 만한 내용은 있었다. 펄 언어에서 보간(Interpolation)가능한 문자열과 보간하지 않는 문자열을 구분하는 문법이 있고, 그 전통이 펄 프로그래머들로부터 파이썬까지 따라왔다는 것, 혹은 (사람이 이해하는)자연어는 쌍따옴표로, 기계가 이해하는 언어는 홑따옴표로 쓴다는 규칙이 있었다. 어떤 사람은 영어의 문장부호 규칙에서 그것이 따라왔다고 보는 사람도 있었다. 쓰는 사람 마음이지만 오픈소스 프로젝트에 참여하는 것을 고려한다면 참고할 수 있을 것이다.</p>
+
+<p>책을 읽으면서 파이썬 코드의 가독성이 정말 좋다는 것, 그리고 필요하다고 생각하는 라이브러리가 대부분 있다는 것을 느꼈다. 최근에 인기가 많은 Node.js도 라이브러리가 많이 구현돼있지만 데이터 과학쪽은 아직 파이썬의 환경이 더 잘 되있고, 초보자가 접근하기도 더 수월하다고 생각한다. 책이 얇고 다양한 주제에 대해 다루고 있기 때문에 심층적인 내용을 다룰 수 없는 것은 어쩔 수 없다. 하지만 흥미를 일으키기에 충분한 분량의 내용이 각 챕터별로 들어있다고 생각한다. 리뷰를 읽으실 초보자분들이 이 책을 통해 즐거운 코딩경험을 하시길 기대한다.</p>
+
+<p>#웹 크롤러 #웹 크롤링 #웹 스크래이퍼 #웹 스크래이핑</p>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '/2017/05/07/python-scraping.html';
+      this.page.identifier = '/2017/05/07/python-scraping.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://pierceh89.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2017/05/07/python-scraping.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seeking good practices</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Hyounggap An</li><li><a class="u-email" href="mailto:hyounggap.an@gmail.com">hyounggap.an@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/pierceh89"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">pierceh89</span></a></li><li><a href="https://www.linkedin.com/in/hyounggap-an-4991538a"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">Hyounggap An</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>rss</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

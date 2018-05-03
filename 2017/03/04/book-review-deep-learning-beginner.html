@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>딥러닝/머신러닝 독학의 시작, 딥러닝 첫걸음 리뷰 | Seeking good practices</title>
+<meta name="generator" content="Jekyll v3.8.1" />
+<meta property="og:title" content="딥러닝/머신러닝 독학의 시작, 딥러닝 첫걸음 리뷰" />
+<meta name="author" content="Hyounggap An" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="작년에 알파고가 등장한 이후로 머신러닝에 대한 대중의 관심이 대단히 높아졌다. 거기에 그치지 않고 구글, 네이버가 딥러닝을 이용해 번역의 질을 비약적으로 끌어올림으로써 딥러닝은 몰라서는 안되는 중요한 기술이 됐다. 내가 처음 머신러닝을 접한 것은 3년 전인데, Coursera라고 하는 온라인 학습 플랫폼에서 Andrew Ng 교수가 개설한 강의였다. 영어 학습자 커뮤니티에는 잘 정리된 자료들도 많고 활발한 교류가 이뤄졌는데, 한국어 커뮤니티는 사람도 별로 없고 자료도 거의 없어서 배우는데 애를 먹었다. 그런데 실제로 써볼 기회가 없어서 잊고 있다가 자연어 처리 문제를 해결하기 위해 머신러닝을 다시 보게 되었다. 그래서 자료를 찾아보던 중 입문서인 ‘딥러닝 첫걸음’을 읽게 되었다. 그 외에 홍콩 과기대 김성훈 교수가 제공하는 ‘모두를 위한 머신러닝’강의도 찾아봤는데, 한국어로 된 자료들이 늘어나서 너무 기쁘다." />
+<meta property="og:description" content="작년에 알파고가 등장한 이후로 머신러닝에 대한 대중의 관심이 대단히 높아졌다. 거기에 그치지 않고 구글, 네이버가 딥러닝을 이용해 번역의 질을 비약적으로 끌어올림으로써 딥러닝은 몰라서는 안되는 중요한 기술이 됐다. 내가 처음 머신러닝을 접한 것은 3년 전인데, Coursera라고 하는 온라인 학습 플랫폼에서 Andrew Ng 교수가 개설한 강의였다. 영어 학습자 커뮤니티에는 잘 정리된 자료들도 많고 활발한 교류가 이뤄졌는데, 한국어 커뮤니티는 사람도 별로 없고 자료도 거의 없어서 배우는데 애를 먹었다. 그런데 실제로 써볼 기회가 없어서 잊고 있다가 자연어 처리 문제를 해결하기 위해 머신러닝을 다시 보게 되었다. 그래서 자료를 찾아보던 중 입문서인 ‘딥러닝 첫걸음’을 읽게 되었다. 그 외에 홍콩 과기대 김성훈 교수가 제공하는 ‘모두를 위한 머신러닝’강의도 찾아봤는데, 한국어로 된 자료들이 늘어나서 너무 기쁘다." />
+<meta property="og:site_name" content="Seeking good practices" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-04T00:00:00+09:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Hyounggap An"},"mainEntityOfPage":{"@type":"WebPage","@id":"/2017/03/04/book-review-deep-learning-beginner.html"},"description":"작년에 알파고가 등장한 이후로 머신러닝에 대한 대중의 관심이 대단히 높아졌다. 거기에 그치지 않고 구글, 네이버가 딥러닝을 이용해 번역의 질을 비약적으로 끌어올림으로써 딥러닝은 몰라서는 안되는 중요한 기술이 됐다. 내가 처음 머신러닝을 접한 것은 3년 전인데, Coursera라고 하는 온라인 학습 플랫폼에서 Andrew Ng 교수가 개설한 강의였다. 영어 학습자 커뮤니티에는 잘 정리된 자료들도 많고 활발한 교류가 이뤄졌는데, 한국어 커뮤니티는 사람도 별로 없고 자료도 거의 없어서 배우는데 애를 먹었다. 그런데 실제로 써볼 기회가 없어서 잊고 있다가 자연어 처리 문제를 해결하기 위해 머신러닝을 다시 보게 되었다. 그래서 자료를 찾아보던 중 입문서인 ‘딥러닝 첫걸음’을 읽게 되었다. 그 외에 홍콩 과기대 김성훈 교수가 제공하는 ‘모두를 위한 머신러닝’강의도 찾아봤는데, 한국어로 된 자료들이 늘어나서 너무 기쁘다.","@type":"BlogPosting","dateModified":"2017-03-04T00:00:00+09:00","datePublished":"2017-03-04T00:00:00+09:00","headline":"딥러닝/머신러닝 독학의 시작, 딥러닝 첫걸음 리뷰","url":"/2017/03/04/book-review-deep-learning-beginner.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Seeking good practices" /><script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73592063-3', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Seeking good practices</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/tags/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">딥러닝/머신러닝 독학의 시작, 딥러닝 첫걸음 리뷰</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-03-04T00:00:00+09:00" itemprop="datePublished">2017 Mar 4
+      </time><div class="post-tags">
+  <i class="fa fa-tags" aria-hidden="true"></i>
+  
+  
+  <a href="/tags/#book review">book review</a>
+  
+</div>
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>작년에 알파고가 등장한 이후로 머신러닝에 대한 대중의 관심이 대단히 높아졌다. 거기에 그치지 않고 구글, 네이버가 딥러닝을 이용해 번역의 질을 비약적으로 끌어올림으로써 딥러닝은 몰라서는 안되는 중요한 기술이 됐다. 내가 처음 머신러닝을 접한 것은 3년 전인데, <a href="https://coursera.org">Coursera</a>라고 하는 온라인 학습 플랫폼에서 Andrew Ng 교수가 개설한 강의였다. 영어 학습자 커뮤니티에는 잘 정리된 자료들도 많고 활발한 교류가 이뤄졌는데, 한국어 커뮤니티는 사람도 별로 없고 자료도 거의 없어서 배우는데 애를 먹었다. 그런데 실제로 써볼 기회가 없어서 잊고 있다가 자연어 처리 문제를 해결하기 위해 머신러닝을 다시 보게 되었다. 그래서 자료를 찾아보던 중 입문서인 ‘딥러닝 첫걸음’을 읽게 되었다. 그 외에 홍콩 과기대 김성훈 교수가 제공하는 <a href="https://hunkim.github.io/ml/">‘모두를 위한 머신러닝’</a>강의도 찾아봤는데, 한국어로 된 자료들이 늘어나서 너무 기쁘다.</p>
+
+<p><img src="/assets/img/딥러닝첫걸음_1.jpg" alt="" class="scale-with-grid-center" /></p>
+
+<p>책을 읽기전에 마음에 들었던 점은 책의 크기였다. 소설책과 같은 크기에 두께는 소설책보다 더 얇다. 또 책 전체 페이지가 200페이지를 넘지 않는다. ‘첫걸음’이 될 책답게 입문자들에게 부담을 주지 않으려고 노력한 것이 느껴졌다. 그리고 책상에 앉아서 진득히 봐야할 내용도 있지만, 퇴근 시간에 지하철에서 읽은 챕터도 있을 정도로 쉽게 내용을 전달하고 있다. 딥러닝을 강의를 통해 배우면 빠지지 않고 등장하는 것들이 수식이다. 비용 함수, 최적화 함수, 그 외 확률 이론, 선형 대수 등 엄밀히 들어가면 배울게 굉장히 많지만 작가가 정말 필요한 부분에서만 수식을 제시하고 있다. 그래서 책에서 다루는 식들은 ‘시그모이드’, ‘가중치 갱신을 위한 델타 규칙’ 정도로 요약할 수 있을 것 같다.</p>
+
+<p><img src="/assets/img/딥러닝첫걸음_2.jpg" alt="" class="scale-with-grid-center" /></p>
+
+<p>책의 구성이 재미있다. 보통 책의 마지막 장에 오는 기술의 한계를 첫 장에서 설명하고 있다. 머신러닝의 정확도는 학습된 데이터에 따라 크게 달라진다는 것인데, 요새 머신러닝이 만능인 것처럼 소개되고 인간의 일을 대신할 것처럼 겁주는 사람들을 경계하라고 미리 언급하는 것 같다. 실제로 현실세계에서 데이터의 복잡도는 무한하고, 현실세계 전체를 반영하는 데이터를 제공/학습하기는 거의 불가능하기 때문이다. 이를 알려주는 사례가 최근에 발생한 테슬라의 자율주행사고, 알파고의 실수이다. 이 점을 이해한 뒤에 단층 신경망, 다층 신경망, 컨브넷(Convolutional Network)들을 차례대로 매트랩 예제들을 구현해가면서 배우게 된다. 역전파(Backpropagation) 알고리즘과 컨브넷에 대해서 설명할 때 아래 그림처럼 단계별로 그림을 수식과 함께 제시해줘서 이해하는데 많은 도움이 됐다. 그리고 모멘텀이나 드롭아웃같은 학습 규칙을 추가적으로 설명해주는 것도 괜찮았다. 또 마음에 들었던 점이 각 챕터 마지막에 배운 내용을 요약하는 페이지인데, 다음 장으로 넘어가기 전에 혼자 정리해 볼 수 있어서 좋다. 빈칸 채우기같은 것으로 되어 있었다면 더 효과가 좋았을 것 같다.</p>
+
+<p><img src="/assets/img/딥러닝첫걸음_3.jpg" alt="" class="scale-with-grid-center" /></p>
+
+<p>이 책에 대해 전반적으로 아쉬운 부분이 있다면, 페이지를 너무 아낀듯한 인상이다. 난 컴퓨터 공학을 전공했는데 학부에서 Matlab을 사용한 적이 전혀 없었다. Matlab 코드가 직관적인 면이 있긴 하지만 처음 보는 사람들에게는 이해하기 어려울 수 있는데 코드에 대한 설명이 좀 부실한 느낌이 들었다. 6장에서는 ‘책의 범위를 벗어나는’코드 설명으로 생략된 부분이 많아서 ‘어 아직 이해 안 됐는데…‘하면서 페이지를 넘겼는데 어느새 책이 끝나버렸다. 요즘 책이 비싸긴 하지만 책의 정가가 18,000원인데 깃허브에 부록을 남기는 식으로 ‘범위를 벗어나는’내용을 정리해 줄 수 있지 않았나 하는 아쉬움이 있다. 심지어 아마존에서 파는 영어버전 책은 정가가 42달러인데 솔직히 비싸다.</p>
+
+<p>두번째 아쉬운 점은 용어정리이다. 어떤 용어는 번역을 하고, 어떤 용어는 외래어로 표기하는데 특별한 규칙을 찾기 힘들어 보인다. 사실 다른 딥러닝 관련 책들에서는 어떻게 했는지 모르겠다. 하지만, 컴퓨터 기술쪽은 영어로 된 자료가 많아서 억지로 번역하면 나중에 다른 자료들을 보는데 어려울 수 있어서 나는 외래어 그대로 쓰는 것을 선호한다. 뒷장으로 가면 갈수록 번역된 용어가 줄어드는데 일관성있게 다 번역하지 않았으면 어땠을까?</p>
+
+<p>마지막으로 매트랩에 관한 아쉬운 점을 쓰려고 한다. 작가가 깡통 매트랩으로도 전부 돌아가는 코드라고 하지만 나는 매트랩이 없어서 대안인 <a href="https://www.gnu.org/software/octave/">옥타브</a>를 이용해 코드를 테스트해봤다. 다행히 매트랩과 호환돼서 6장의 PlotFeatures.m을 제외한 파일을 모두 돌려볼 수 있었다. 파이썬 코드가 제공되어 아예 파이썬으로 코드를 확인해보는 사람들도 있을 것 같다. 그런데 작가가 가독성을 위해 매트랩으로 실습코드를 짰다면 매트랩을 대신할 오픈소스 프로그램이 있다는 것도 설명해주는게 좋을듯 하다.</p>
+
+<p>이런 아쉬운 점들이 있지만 이렇게 쉽게, 필요한 내용들을 알려주는 책은 드문것 같아서 딥러닝 입문용으로 읽어볼만한 책이다. 그 후에도 구글의 자동 자막 생성이나 번역, 이미지 인식, 그림을 그리는 인공지능이 실제로 어떻게 구현됐는지 계속 궁금하다면, 그때 다시 딥러닝을 깊이 있게 설명하는 다른 책을 추가로 보면 될 것 같다.</p>
+
+<p>#딥러닝 입문 #머신러닝 입문 #딥러닝 책 추천</p>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '/2017/03/04/book-review-deep-learning-beginner.html';
+      this.page.identifier = '/2017/03/04/book-review-deep-learning-beginner.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://pierceh89.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2017/03/04/book-review-deep-learning-beginner.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seeking good practices</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Hyounggap An</li><li><a class="u-email" href="mailto:hyounggap.an@gmail.com">hyounggap.an@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/pierceh89"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">pierceh89</span></a></li><li><a href="https://www.linkedin.com/in/hyounggap-an-4991538a"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">Hyounggap An</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>rss</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

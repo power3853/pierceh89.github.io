@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-05-03T22:47:44+09:00</updated><id>/</id><title type="html">Seeking good practices</title><subtitle>머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.
+</subtitle><author><name>Hyounggap An</name></author><entry><title type="html">책리뷰 함수형 사고-프로그래밍 패러다임 전환은 생각보다 어렵다.</title><link href="/2018/03/21/functional-thinking-review.html" rel="alternate" type="text/html" title="책리뷰 함수형 사고-프로그래밍 패러다임 전환은 생각보다 어렵다." /><published>2018-03-21T00:00:00+09:00</published><updated>2018-03-21T00:00:00+09:00</updated><id>/2018/03/21/functional-thinking-review</id><content type="html" xml:base="/2018/03/21/functional-thinking-review.html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;함수형 언어를 사용해보기 전에(함수형 사고에 익숙해지기전에) 이 책을 봤을땐 내용을 거의 이해할 수 없었다. 자바 8스트림, 스칼라를 쓰면서 익숙해지고나니 내용이 이해되기 시작했다. 그래도 여전히 클로저 코드는 외계어 수준이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Groovy 예제가 상당히 많다. 테스트코드 짤 때만 써서 함수형 언어로 쓸 수 있는 부분은 잘 몰랐는데 이번 기회에 많이 알게 됐다. 그렇지만 API 이름이 기존 함수형 언어의 그것들과 달라서 좀 불편하다. 그래서 나는 스칼라를 더 선호한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;복잡한 부분/움직이는 부분/상태를 최소화해서 코드 이해를 돕는다는 부분은 마음에 든다. 하지만 런타임이나 언어 기능으로 프로그래머가 제어해야했던 부분을 맡기는 것은 조금 불안하다. JAVA의 GC를 처음 본 C언어 개발자가 느꼈던 불안감과 비슷하지 않을까? 아마 미래에는 이런 것이 자연스러워질 것이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;문제를 푸는 방식이 달라졌다. 대표적인 예로 나오는 리스트 순회나 함수를 파라미터로 넣어 동작을 파라미터화 하는 방법 등으로 명령형 프로그래밍보다 간결하게 문제를 풀 수 있게 됐다. 하지만 엔터프라이즈급 애플리케이션을 설계에서는 객체지향적 설계 방법이 가지는 지위가 워낙 견고해서 큰 그림을 그리는 방법은 크게 바뀌지 않을 것 같다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;책 제목에서 기대하는 것처럼 함수형 사고와 친해지기는 힘들었다. 기존 패러다임에 익숙하고, 실제로 코딩을 안해봐서 그런것 같다. 우리가 처음 코딩을 배울때처럼 한줄 씩 써보면서 익힌 후 다시 그 의미를 이해하는 용도로 이 책을 읽어보면 더 도움이 될 것 같다.&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html">함수형 언어를 사용해보기 전에(함수형 사고에 익숙해지기전에) 이 책을 봤을땐 내용을 거의 이해할 수 없었다. 자바 8스트림, 스칼라를 쓰면서 익숙해지고나니 내용이 이해되기 시작했다. 그래도 여전히 클로저 코드는 외계어 수준이다.</summary></entry><entry><title type="html">책리뷰 클린소프트웨어-애자일 원칙과 패턴, 그리고 실천 방법</title><link href="/2018/01/02/clean-software.html" rel="alternate" type="text/html" title="책리뷰 클린소프트웨어-애자일 원칙과 패턴, 그리고 실천 방법" /><published>2018-01-02T00:00:00+09:00</published><updated>2018-01-02T00:00:00+09:00</updated><id>/2018/01/02/clean-software</id><content type="html" xml:base="/2018/01/02/clean-software.html">&lt;p&gt;팀원 중 한명이 이 책이 좋다고해서 사두고 책장에 꽂아만 뒀다가 시니어 엔지니어 분의 제안으로 이 책으로 스터디를 시작하게 되었다. ‘클린 소프트웨어’라는 책 제목을 봤을 땐, 과연 어떤 내용을 담고 있을지 잘 예상되지 않았다. 하지만 책을 모두 읽고 난 지금은 나같은 주니어 개발자들이 모두 읽어봤으면 좋겠다.&lt;br /&gt;
+내가 기억하는 책의 큰 흐름은 다음과 같다.&lt;/p&gt;
+
+&lt;p class=&quot;message&quot;&gt;애자일 소프트웨어 개발선언 &amp;gt; TDD &amp;gt; Pair Programming &amp;gt; Design Patterns &amp;gt; Case Study &amp;gt; Package Design&lt;/p&gt;
+
+&lt;p&gt;애자일 개발 방법론에 대해 설명하고, SOLID 개발원칙을 지키면서 개발하는데 왜 TDD가 중요한지 알려준다. 그리고 Pair Programming 예제를 통해 코드가 어떻게 진화하는지 보여준다. 그 뒤에 디자인 패턴을 설명하면서 Case Study를 통해 패턴이 어떻게 적용되는지 코드를 통해 보여준다. 끝으로 패키지 설계 원칙을 설명하고 Case Study에 적용해본다.&lt;/p&gt;
+
+&lt;p&gt;이 책에서는 TDD를 거의 책 전반에 걸쳐서 이야기 한다고 할만큼 강조하고 있다. 오죽하면 챕터마다 요약을 ‘기승전TDD’라고 쓴적도 있다. TDD를 해야한다는 말은 많이 들었고 TDD 책도 조금 읽어봤지만, 업무에서는 적용해보지 못했다. 개발 속도가 느리기도 하고 그 당시 나의 경험이나 시간적 여유 등 여러가지 이유가 있었겠지만 그랬다. 하지만 이책을 통해 내가 실제로 TDD를 해본 점에서 이 책을 높이 평가하고 싶다. 모든 예제가 Test case가 가장 먼저 나오고 그 뒤에 구현코드가 나온다. 나는 Case Study를 읽으면서 실제로 코드를 구현하였는데, Testcase가 파란불이 나오도록 차례로 구현해보고 비교해봤다. 구현코드 없이 테스트부터 먼저 짜는 것에 어떤 심리적 경계심이 있었다. 하지만 코드가 진화하는 과정을 보고 작가의 방식을 따라가다보니 어느새 TDD가 익숙해졌다.&lt;/p&gt;
+
+&lt;p&gt;Design Pattern이나 나머지 부분은 아직 프로젝트 경험이 많이 없어서 그런지 다른 책보다 더 잘 설명하고 있다거나 못하다고 말하기 힘들다. 이 책에서 아쉬운 점도 있다. 코드가 일부는 C++로 되어있고 Java 코드도 최신 코드가 아니다. 이전에 출판된 책을 재출간하는 것인데 소스코드도 10년이란 시간이 흐른만큼 업데이트 해줬으면 하는 아쉬움이 있다. 하지만 책 내용을 이해하는데는 크게 문제가 없다.(그래서 그대로인가)&lt;/p&gt;
+
+&lt;p&gt;책의 내용을 요약해보면 다음과 같다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;TDD를 하자.&lt;/li&gt;
+  &lt;li&gt;작동하는 소프트웨어를 만들어라.&lt;/li&gt;
+  &lt;li&gt;확장은 나중에, 실제로 필요할 떄 고민하자&lt;/li&gt;
+  &lt;li&gt;원칙은 원칙일뿐 집착하지 말자.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;각자가 가진 경험에 따라 책이 전하고 싶은 메시지가 다르게 다가올 것 같다. 하지만 나는 굉장히 중요한 책을 읽었다는 느낌을 받았다. 더 빨리 읽었으면 좋다는 생각이 들었다. 주니어 개발자들 모두 이 책을 보고 한 단계 성장하는 단계가 됐으면 좋겠다.&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html">팀원 중 한명이 이 책이 좋다고해서 사두고 책장에 꽂아만 뒀다가 시니어 엔지니어 분의 제안으로 이 책으로 스터디를 시작하게 되었다. ‘클린 소프트웨어’라는 책 제목을 봤을 땐, 과연 어떤 내용을 담고 있을지 잘 예상되지 않았다. 하지만 책을 모두 읽고 난 지금은 나같은 주니어 개발자들이 모두 읽어봤으면 좋겠다. 내가 기억하는 책의 큰 흐름은 다음과 같다.</summary></entry><entry><title type="html">손으로 익히며 배우는 네트워크 첫걸음 리뷰</title><link href="/2017/12/18/network-beginner.html" rel="alternate" type="text/html" title="손으로 익히며 배우는 네트워크 첫걸음 리뷰" /><published>2017-12-18T00:00:00+09:00</published><updated>2017-12-18T00:00:00+09:00</updated><id>/2017/12/18/network-beginner</id><content type="html" xml:base="/2017/12/18/network-beginner.html">&lt;p&gt;‘Hello coding x 첫걸음’시리즈를 리뷰하는 건 이번이 두번째 입니다. 저번엔 헬로코딩 알고리즘을 봤습니다. 정말 비전공자를 위한 책이고, 또 입문자를 위한 책이다 보니 전공자인 제게는 정말 쉽게 읽혔습니다. 그렇다고 수박 겉핥기 정도로 쉬운건 아니고 뒤로 갈수록 어려운 내용이 나옵니다. 7, 8장은 솔직히 저도 배운지 오래된 내용이라 이해하는데 시간이 걸렸구요.&lt;/p&gt;
+
+&lt;p&gt;기술서를 고를 때 책의 구성을 꼭 살펴봅니다. 내용 설명/요약/연습문제/실습 이런 구성을 좋아하는데 이 책도 그러한 구성입니다. 챕터마다 실습이 하나씩 있어서 네트워크에 친근해 질 수 있습니다. 그리고 연습문제가 있어서 내용을 간단히 복습해 볼 수 있습니다. 문제 푸는 걸 싫어하시는 분들도 있겠지만 장기 기억을 하는데 있어서는 정리 및 문제풀기가 필수이니 그냥 지나치지 않으시길 권합니다. 또 하나 특이한 구성은 부록으로 책의 요약이 있다는 점입니다. 사전처럼 챕터마다 배운 내용이 나열되어 있는데, 기억이 안 날때 빠르게 살펴볼 수 있을것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;단점은 딱히 없지만 책의 내용이 좀 오래된 것이 아쉽네요. 하지만 추천의 글에 쓰인 것처럼 그때나 지금이나 달라진 것은 없고, 실습 환경만 달라졌을 뿐입니다. Hello coding x 첫걸음 시리즈로 입문자들 모두 컴퓨터와 친해지길 기대합니다.&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html">‘Hello coding x 첫걸음’시리즈를 리뷰하는 건 이번이 두번째 입니다. 저번엔 헬로코딩 알고리즘을 봤습니다. 정말 비전공자를 위한 책이고, 또 입문자를 위한 책이다 보니 전공자인 제게는 정말 쉽게 읽혔습니다. 그렇다고 수박 겉핥기 정도로 쉬운건 아니고 뒤로 갈수록 어려운 내용이 나옵니다. 7, 8장은 솔직히 저도 배운지 오래된 내용이라 이해하는데 시간이 걸렸구요.</summary></entry><entry><title type="html">React리액트 관련 링크 모음</title><link href="/2017/09/19/react-learning-links.html" rel="alternate" type="text/html" title="React리액트 관련 링크 모음" /><published>2017-09-19T00:00:00+09:00</published><updated>2017-09-19T00:00:00+09:00</updated><id>/2017/09/19/react-learning-links</id><content type="html" xml:base="/2017/09/19/react-learning-links.html">&lt;p&gt;프론트엔드 작업을 하게 되면서 리액트를 사용하게 됐다. 회사에 입사할 즈음 잠깐 배운적이 있었는데 그땐 너무 어려워서 못할것 같았는데 지금 보니 생각보다 금방 배웠다. 간단한 상호작용을 하는 &lt;a href=&quot;https://pierceh89.github.io/pantone-palette/&quot;&gt;토이앱&lt;/a&gt;은 하루만에 만들 수 있었다. 근데 그게 다가 아니고 redux를 배우고, react-router, redux-thunk 같은 미들웨어를 배우고 나니 프로덕션 코드를 읽을 수 있는 정도가 되었다. 아직 모르는게 더 많지만 내가 참고한 순서대로 링크를 정리해서 공유해보려고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;shadow-doms&quot;&gt;Shadow DOMs&lt;/h2&gt;
+
+&lt;p&gt;Shadow DOM은 리액트가 리액트처럼 작동하는 아이디어를 이해하기 위해 읽어보면 좋다. 아래에 있는 세 개의 문서는 나도 다 읽어보지 못했지만 아직 위시리스트?로 돼있어서 정리해두었다.&lt;br /&gt;
+&lt;a href=&quot;https://www.html5rocks.com/ko/tutorials/webcomponents/shadowdom/&quot;&gt;ShadowDOM-101&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.html5rocks.com/ko/tutorials/webcomponents/shadowdom-201/&quot;&gt;ShadowDOM-201&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.html5rocks.com/ko/tutorials/webcomponents/shadowdom-301/&quot;&gt;ShadowDOM-301&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;강의&quot;&gt;강의&lt;/h2&gt;
+
+&lt;p&gt;한글로 된 다른 리액트 강의를 찾아보지는 않았지만 여기보다 잘 가르치기 힘들다고 본다. React, Router, Redux, Middleware 차례대로 배우다보면 금방 리액트 앱을 짤 수 있을 실력이 갖춰진다.&lt;br /&gt;
+&lt;a href=&quot;https://velopert.com/reactjs-tutorials&quot;&gt;React tutorials&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://velopert.com/3365&quot;&gt;Redux&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://velopert.com/3401&quot;&gt;Redux and middleware&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ducks&quot;&gt;Ducks&lt;/h2&gt;
+
+&lt;p&gt;조금 복잡한 리액트앱을 짜다보면 프로젝트 구조에 대해서 고민을 하게 되는데 그때 읽어보면 좋은 글이다. Ducks 구조로 만들어두면 파일을 찾아보기가 훨씬 편해진다.&lt;br /&gt;
+&lt;a href=&quot;https://medium.com/@scbarrus/the-ducks-file-structure-for-redux-d63c41b7035c&quot;&gt;The Ducks File Structure for Redux&lt;/a&gt;: [영문] Ducks구조로 대체한 이유, 핵심 요약.&lt;br /&gt;
+&lt;a href=&quot;https://github.com/erikras/ducks-modular-redux&quot;&gt;Ducks documentation&lt;/a&gt;: [영문] Ducks 구조를 제안한 사람의 documentation. ducks 구조의 예제 코드와 ducks 구조로 redux app을 만들 수 있게 도와주는 라이브러리도 소개하고 있다.&lt;br /&gt;
+&lt;a href=&quot;https://github.com/JisuPark/ducks-modular-redux&quot;&gt;Ducks documentation 한글판&lt;/a&gt;: 위 글의 한글 번역&lt;/p&gt;
+
+&lt;h2 id=&quot;기타&quot;&gt;기타&lt;/h2&gt;
+
+&lt;p&gt;따로 묶어두기 애매하지만 봐두면 좋을 것들은 여기에 모아놨다. 아마 강의를 들으면서 리액트에 익숙해지면 여기에 있는 링크들을 마주치게 될 것 같다.
+&lt;a href=&quot;https://react-bootstrap.github.io&quot;&gt;React-bootstrap&lt;/a&gt;: [영문] 부트스트랩이 적용된 리액트 컴포넌트&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/prop-types#prop-types&quot;&gt;PropTypes&lt;/a&gt;: [영문] props에 대해 type validation을 도와주는 라이브러리&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0&quot;&gt;Smart and Dumb Components&lt;/a&gt;: [영문] Smart &amp;amp; Dumb component에 대해 redux의 개발자가 정리한 글&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@dan_abramov/react-components-elements-and-instances-90800811f8ca&quot;&gt;React Components, Elements, and Instances&lt;/a&gt;: [영문] Component, Element, Instance에 대해 정리한 글&lt;br /&gt;
+&lt;a href=&quot;http://meetup.toast.com/posts/110&quot;&gt;리액트 렌더링과 성능 알아보기&lt;/a&gt;: 리액트의 성능에 관한 글&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/reduxactions/redux-actions&quot;&gt;react-actions&lt;/a&gt;: [영문] redux 액션의 생성을 더 편하게 도와주는 라이브러리&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://facebook.github.io/immutable-js/&quot;&gt;immutable.js&lt;/a&gt;: [영문] 페이스북에서 개발한 immutable data structure 라이브러리&lt;br /&gt;
+&lt;a href=&quot;https://facebook.github.io/react/docs/update.html&quot;&gt;Immutability-helpers&lt;/a&gt;: [영문] immutable.js와 비슷하게 데이터를 삽입,수정,삭제 할 경우 변경된 새로운 객체를 리턴해주는 라이브러리&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React documentation&lt;/a&gt;: [영문] 리액트 공식 도큐멘테이션&lt;br /&gt;
+&lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux pattern&lt;/a&gt;: [영문] MVC에서 조금 더 발전된 디자인 패턴 flux&lt;br /&gt;
+&lt;a href=&quot;https://github.com/facebook/react/wiki/Complementary-Tools&quot;&gt;Complementary tools&lt;/a&gt;: [영문] 페이스북이 알려주는 리액트 개발 보충 도구들&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="react" /><category term="web development" /><summary type="html">프론트엔드 작업을 하게 되면서 리액트를 사용하게 됐다. 회사에 입사할 즈음 잠깐 배운적이 있었는데 그땐 너무 어려워서 못할것 같았는데 지금 보니 생각보다 금방 배웠다. 간단한 상호작용을 하는 토이앱은 하루만에 만들 수 있었다. 근데 그게 다가 아니고 redux를 배우고, react-router, redux-thunk 같은 미들웨어를 배우고 나니 프로덕션 코드를 읽을 수 있는 정도가 되었다. 아직 모르는게 더 많지만 내가 참고한 순서대로 링크를 정리해서 공유해보려고 한다.</summary></entry><entry><title type="html">Spring Boot 이해하면서 쓰기, ‘실전 스프링부트 워크북’</title><link href="/2017/08/14/pro-spring-boot.html" rel="alternate" type="text/html" title="Spring Boot 이해하면서 쓰기, '실전 스프링부트 워크북'" /><published>2017-08-14T00:00:00+09:00</published><updated>2017-08-14T00:00:00+09:00</updated><id>/2017/08/14/pro-spring-boot</id><content type="html" xml:base="/2017/08/14/pro-spring-boot.html">&lt;center&gt;
+&lt;img src=&quot;/assets/img/pro_spring_boot_1.jpg&quot; style=&quot;display: inline;&quot; height=&quot;359&quot; alt=&quot;Pro Spring Boot, 이랬던 책의 표지가&quot; /&gt;
+&lt;img src=&quot;/assets/img/스프링부트_워크북_1.jpg&quot; style=&quot;display: inline;&quot; width=&quot;280&quot; alt=&quot;실전 스프링 부트 워크북, 이렇게 바뀌었다.&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;‘워크북(workbook)’ 이라는 단어의 뜻을 찾아보면 ‘작업자의 매뉴얼’, ‘연습 문제를 모아놓은 책’ 등이 있다. 내가 이 책의 제목을 봤을 땐 쿡북느낌의 필요할 때마다 레시피를 찾아 바로 적용하는 느낌의 책을 연상하게 되었다. 이전에 ‘스프링부트 공작소’라는 책을 봤는데 그러한 것이어서 이 책도 그러려니 했다. 하지만 책을 표지로만 판단하지 말라는 명언대로, 책을 계속 읽어보니 워크북과는 거리가 멀다는 느낌이 들었다.&lt;br /&gt;
+원서의 이름을 찾아보니 &lt;a href=&quot;http://www.apress.com/br/book/9781484214329&quot;&gt;Pro Spring Boot&lt;/a&gt;였다. 아~ 역시. 책의 대상 독자는 어떨까?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Who This Book Is For&lt;/p&gt;
+
+  &lt;p&gt;Experienced Spring and Java developers seeking increased productivity gains and decreased complexity and development time in their applications and software services.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;‘향상된 생산성, 그리고 복잡도와 개발시간의 절감을 원하는 숙련된 스프링 및 자바 개발자’가 독자이다. 그런데 번역서의 난이도는 초중급이라고 되어있다. 여하간 스프링부트가 코드를 하나도 생성해내지 않고 내부적으로 어떻게 작동하는지, 어떤 옵션을 지원하는지 세세하게 설명하는 동시에, 스프링에 대해서도 복습하는 형식으로 설명을 추가적으로 해주고 있다. 이런 점에서 초보가 봐도 무방한 책이라고 생각했던 것 같다.&lt;/p&gt;
+
+&lt;p&gt;책에서 아쉬운 점은 Maven을 의존성 관리툴로 설명하고 있는 점이다. &lt;a href=&quot;https://github.com/apress/pro-spring-boot&quot;&gt;소스코드&lt;/a&gt;를 보면 Maven, Gradle 둘 다 사용할 수 있지만 커맨드를 실행할 때는 Maven위주로 설명하고 있다. p85에서 파라미터를 추가하는 테스트가 있는데, 동일한 작동을 시험해보기 위해 gradle 명령어를 찾아보고, 추가적으로 Task를 정의해줘야 했었다. &lt;a href=&quot;https://stackoverflow.com/questions/23316843/get-command-line-arguments-from-spring-bootrun&quot;&gt;Stackoverflow 참조&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;책에 대해 좀 투덜거리긴 했지만 책의 내용은 전혀 흠잡을 곳이 없다. 스프링 자동구성, 스프링 부트 테스트, 데이터 액세스, 보안, 메시징, 액추에이터, 배포, 클라우드까지 주요한 내용들을 모두 담고있다. 생산성 향상을 위해 스프링부트를 현장에 투입하려는 사람들이 많아진 시점에 잘 나온 책인 것 같다. 추가적으로 사람들이 생산성을 위해 자바가 아니라 코틀린을 베이스로 개발하는 것도 고려하고 있는데, 코틀린 + 스프링부트 보일러 플레이트를 만드는 작업을 해보면 재밌을 것 같다.&lt;/p&gt;
+
+&lt;p&gt;덧. 책이 만약 Gradle을 중심으로 설명했다면 아마 책이 더 얇아졌을것 같다 :)&lt;/p&gt;
+
+&lt;p&gt;#Pro Spring Boot #스프링부트 워크북 #스프링부트 책 추천&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry><entry><title type="html">파일의 라인별로 명령어 실행시키기</title><link href="/2017/08/13/execute-file-line-by-line.html" rel="alternate" type="text/html" title="파일의 라인별로 명령어 실행시키기" /><published>2017-08-13T00:00:00+09:00</published><updated>2017-08-13T00:00:00+09:00</updated><id>/2017/08/13/execute-file-line-by-line</id><content type="html" xml:base="/2017/08/13/execute-file-line-by-line.html">&lt;p&gt;The original content is from &lt;a href=&quot;https://linuxprograms.wordpress.com/2010/12/14/shell-script-execute-command-every-line-file/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;s3에서 복잡한 파일트리 구조로 흩어져 있는 파일경로의 리스트를 모으고 한번에 다운로드를 받을 수 없을까? 역시 구글링해보니 bash로 스크립트를 짜면 해결할 수 있었다.
+내가 만든 파일 리스트에서 라인을 특정 커맨드에 append해야했기 때문에, 원본에서 파일을 조금 수정했다. shell script나 command line tool들은 알면 알수록 유용한 기능이 많고 응용 범위가 방대하다. &lt;a href=&quot;https://github.com/jlevy/the-art-of-command-line&quot;&gt;The Art of Command Line&lt;/a&gt;에 가면 정리가 잘 되어 있으니 시간이 날 때마다 정리해둬야겠다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#/bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$# &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ne&lt;/span&gt; 1 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then
+   &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Usage: execute_command_per_line filename&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;line
+&lt;span class=&quot;k&quot;&gt;do
+   &lt;/span&gt;aws s3 &lt;span class=&quot;nt&quot;&gt;--region&lt;/span&gt; ap-northeast-2 &lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;s3://[s3_bucket_name]/&lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt; ./logs
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Hyounggap An</name></author><category term="shell script" /><summary type="html">The original content is from here</summary></entry><entry><title type="html">자바 8을 얼른 적용해보고 싶다면, Java8 in action</title><link href="/2017/07/11/java8-in-action.html" rel="alternate" type="text/html" title="자바 8을 얼른 적용해보고 싶다면, Java8 in action" /><published>2017-07-11T00:00:00+09:00</published><updated>2017-07-11T00:00:00+09:00</updated><id>/2017/07/11/java8-in-action</id><content type="html" xml:base="/2017/07/11/java8-in-action.html">&lt;p&gt;&lt;img src=&quot;/assets/img/java8_in_action_1.jpg&quot; alt=&quot;Java8 in action cover&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;자바 9이 나온지 수개월이 지나가는 시점에 자바 8을 리뷰하고 있는게 좀 우스울수도 있지만, 리뷰를 해보려고 한다. 자바 9이 나온지 아직 시간이 많이 지난것이 아니라서 프로덕션 런타임으로 결정하기엔 시기상조라고 본다. 그래서 지금이라도 자바 8을 살펴보는 사람들에게 이 리뷰가 도움이 됐으면 한다.&lt;/p&gt;
+
+&lt;p&gt;결론부터 말하면, 자바 8을 잘 사용하고 싶은 사람들 모두에게 권하고 싶은 책이다. 책을 처음부터 순서대로 읽으면 잘 짜여진 이야기를 읽는 느낌이 든다.&lt;/p&gt;
+
+&lt;p&gt;1부에서는 컴퓨터의 하드웨어 발전 방향이 변함에 따라, 병렬프로그래밍의 중요성이 커지고, 자바가 함수형 프로그래밍이라는 새로운 패러다임을 받아들이게 된 이유를 차례대로 알 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;2부에는 이어서 스트림 API에 대해 자세히 설명한다. 기존의 명령형 프로그래밍 코드와 스트림으로 리팩토링된 코드를 비교하면서 스트림 API를 통해 명료하고 짧아진 코드를 확인해 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;3부에서는 Optional, 디폴트 메서드, CompletableFuture, 새로운 DateTime 라이브러리를 소개한다. 이들 라이브러리는 이전 자바에 비해 훨씬 강력한 기능들을 제공하기 때문에 꼭 봐야한다. 나아가 객체지향에서 자주 쓰이던 디자인 패턴이 함수형 프로그래밍을 사용하면 어떻게 간단히 구현될 수 있는지 보여준다.&lt;/p&gt;
+
+&lt;p&gt;4부에서는 함수형 프로그래밍을 살펴보고, JVM위에서 돌아가는 함수형 프로그래밍 언어 스칼라와 자바를 비교한다. 또 흥미로운 내용을 부록에 넣어두었는데 이것들은 시간이 될 때마다 읽으려고 한다.&lt;/p&gt;
+
+&lt;p&gt;책 전체에 걸쳐서 코딩 퀴즈와 예제가 많기 때문에 하나씩 실제로 따라해본다면 자바의 새로운 기능에 적응하기 쉬울 것이다. CompletableFuture나 LocalDateTime 같은 경우는 기존 라이브러리에 비해 훨씬 좋아졌으니 꼭 실습해보기를 바란다.&lt;/p&gt;
+
+&lt;p&gt;함수형 프로그래밍이 조금 생소했기에 책을 읽는데 시간이 좀 걸렸지만 읽을 가치가 있는 책이었다.&lt;/p&gt;
+
+&lt;p&gt;#자바8인액션 #Java8 in action #In-action 시리즈 #In-action series&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry><entry><title type="html">피해갈 수 없는 디버깅을 도와주는 전략서, Effective Debugging</title><link href="/2017/06/25/effective-debugging.html" rel="alternate" type="text/html" title="피해갈 수 없는 디버깅을 도와주는 전략서, Effective Debugging" /><published>2017-06-25T00:00:00+09:00</published><updated>2017-06-25T00:00:00+09:00</updated><id>/2017/06/25/effective-debugging</id><content type="html" xml:base="/2017/06/25/effective-debugging.html">&lt;p&gt;&lt;img src=&quot;/assets/img/effective_debugging_1.jpg&quot; alt=&quot;Effective Debugging cover&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;애플리케이션 개발에서 디버깅은 뗄 수 없는 과정이다. 단순한 오타에서 숨어있는 로직 오류까지.. 생각만 해도 골치가 아프다. 학부에서 비주얼 스튜디오에서 C언어로 과제를 구현할 땐 디버거를 쓸 줄 몰라서 printf로 변수값을 하나씩 찍고, 손으로 결과를 계산해보면서 디버깅을 했었다. Java, Javascript 등 다른 언어로 개발을 하면 그 언어에 맞는 도구를 이용해서 디버깅을 했었다. 디버깅을 누구에게 배운게 아니라 시간을 많이 허비한 적도 있고, 몰라서 유용한 도구를 적절히 쓰지 못한 경험도 많다. 그래서 이 책이 나와서 너무 반가웠다.&lt;/p&gt;
+
+&lt;p&gt;책은 디버깅 전략과 같은 방법론으로 시작해서, 다양한 디버깅 도구의 사용법, 그리고 프로그래밍 기법, 컴파일 시점, 실행 시점과 같이 개발 단계별로 디버깅 전략을 소개한다. 저자가 디버깅이 굉장히 고된 작업임을 인지하고, 개발자가 온전히 그 작업에 몰입해야 해결할 수 있다는 것을 강조해서 동료애?를 느낄 수 있었다. 책은 차례대로 읽어도 되고 필요한 챕터를 먼저 읽어도 되는데, 후자를 추천한다. 각 아이템을 읽을 때마다 연관된 아이템의 레퍼런스를 잘 남겨놔서 왔다 갔다하면서 읽기에 좋다.&lt;/p&gt;
+
+&lt;p&gt;책의 난이도는 이펙티브 시리즈답게 솔직히 높다. 저자의 개발 경력만큼 다양한 시나리오에 대해 디버깅 전략을 소개하고 있고, 개발하는 환경 또한 다양하다. 서버 개발자 입장에서, 원격 터미널을 통해 이용할 수 있는 범용 도구들을 소개해주는 것은 유용하게 봤다. 그렇지만, 내가 경험해보지 못한 시나리오가 훨씬 많았다. gdb를 사용하거나 어셈블리어 레벨에서 코드를 살펴보는 것은 꽤 생소했다.&lt;/p&gt;
+
+&lt;p&gt;아직 경력이 적어서 이 책의 전부를 이해하진 못했지만, 초보자라도 여전히 이 책에서 얻을 수 있는 것이 많다고 생각한다. 이슈 트래킹 소프트웨어를 사용하고, 어떻게 구글링해야 원하는 결과를 필터링 해낼 수 있는지, 페어 프로그래밍, 리뷰 프로세스 구축, 유닛 테스트 등 버그가 제품에 들어가지 않도록 최대한 방어하는 절차는 누구든지 이해하고 실천할 수 있기 때문이다. 그래서 이 책을 읽은 개발자들이 디버깅하는 상황을 최소한으로 마주하길 바라면서 리뷰를 마친다.&lt;/p&gt;
+
+&lt;p&gt;#이펙티브 디버깅 #Effective Debugging #Effective 시리즈 #Effective series&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry><entry><title type="html">처음 알고리즘을 입문하시는 분들에게, 헬로 코딩 그림으로 개념을 이해하는 알고리즘 리뷰</title><link href="/2017/05/14/hello-coding-algorithm.html" rel="alternate" type="text/html" title="처음 알고리즘을 입문하시는 분들에게, 헬로 코딩 그림으로 개념을 이해하는 알고리즘 리뷰" /><published>2017-05-14T00:00:00+09:00</published><updated>2017-05-14T00:00:00+09:00</updated><id>/2017/05/14/hello-coding-algorithm</id><content type="html" xml:base="/2017/05/14/hello-coding-algorithm.html">&lt;p&gt;&lt;img src=&quot;/assets/img/그림으로-개념을-이해하는-알고리즘-1.jpg&quot; alt=&quot;헬로 코딩 그림으로 개념을 이해하는 알고리즘 책&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;유튜브에서 &lt;em&gt;Hungarian Dance Algorithm&lt;/em&gt; 이라고 검색하면 재밌는 동영상이 나온다. 나란히 선 사람들이 헝가리 전통 음악에 맞춰 춤을 추는데, 정렬 알고리즘에 따라 자리를 서로 옮겨간다. 사람들이 이런 시도를 하는 것도 흥미롭지만 얼마나 어려우면 춤으로 가르치려는 생각을 했을까 하는 생각도 든다. 저자 역시 알고리즘을 이해하는데 어려움을 겪었고, 그림을 통해 알고리즘을 설명하는 포스팅을 시작했고, 그것이 이 책이 나오는 계기가 되었다고 한다. 여러 사람이 그러한 것처럼, 나도 이 책을 정말 재미있게 읽었다. 후반부의 어려운 부분은 역시 어렵긴 했지만, 역자의 말처럼 나도 이 책만큼 알고리즘을 재미있게 설명하는 책은 읽어보지 못한 것 같다.&lt;/p&gt;
+
+&lt;p&gt;나는 C언어로 자료구조, 알고리즘을 배웠는데 수업 자체와는 별개로 코드의 가독성이 좋지 않아 로직을 이해하는 데에 시간이 더 들었다. 반면에 파이썬으로 구현한 코드를 보면 언어적인 복잡성이 적고 코드가 명료해서 알고리즘 자체에 집중하기에 더 유리하다. 예전에 나온 책 시리즈의 이름처럼 소설처럼 코드가 읽힌다고 느꼈다. 게다가 이해하기 쉽게 그림까지 곁들이니 책을 굉장히 빨리 볼 수 있었다. 책에서 사용하는 자료구조에 대한 설명도 추가적으로 들어가 있으니 알고리즘을 배우고 싶은 누구나 이 책으로 시작할 수 있을 것 같다.&lt;/p&gt;
+
+&lt;p&gt;책 곳곳에 좋은 질문/답변이 들어가 있다. 이런 문제들을 그냥 지나치지말고 곰곰히 생각해보면 본인이 얼마나 이해했는지 알 수 있고 또 더 잘 이해할 수 있으니 꼭 풀어보도록 하자. 챕터 마지막에 있는 문제들도 같은 이유로 꼭 풀어봐야 한다. 문제가 그렇게 어렵지 않고 앞에서 배운 내용을 확인하는 정도이니 너무 부담스러워하지 않아도 된다.&lt;/p&gt;
+
+&lt;p&gt;동적 프로그래밍같은 어려운 내용은 솔직히 그림으로 봐도 어렵긴 했다. 또 최장 공통 부분 문자열의 경우, 예제코드(자바, 파이썬은 완전한 프로그램이 아님)와 설명의 격자 채움이 달라서 사람들이 헷갈릴 것 같았다. 그래도 동적 프로그래밍을 응용할 수 있는 예제들을 제공하고, 연습문제를 풀어보면서 감을 익힐 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/그림으로-개념을-이해하는-알고리즘-3.jpg&quot; alt=&quot;좋은 문제들&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;www.adit.io&quot;&gt;저자의 웹사이트&lt;/a&gt;를 가보면, &lt;a href=&quot;https://namu.wiki/w/Haskell&quot;&gt;하스켈&lt;/a&gt; 및 함수형 프로그래밍의 요소에 대해 설명하는 포스팅을 볼 수 있다. 역시 책에서도 하스켈로 함수형 프로그래밍에 대해서 설명하고 있다. 자바8, C++, Python이 함수형 프로그래밍을 도입하고 스칼라같은 언어가 알려지는 것을 보니 함수형 패러다임이 부상하는 것을 알 수 있다. 나도 스칼라를 사용하면서 느낀 점인데 함수형 언어를 사용하면 코드의 가독성이 더 좋아진다. 그리고 코드가 기존에 비해 짧아져 생산성이 높아지니 한번 살펴봤으면 좋겠다. 해당 페이지의 코드를 자바로 짜면 다음과 같다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SumFunc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Functional programming&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;reduce()&lt;/em&gt; 함수가 두 원소를 더하는 함수를 이용해 최종적으로 리스트의 모든 원소를 더한 하나의 정수값을 리턴하게 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/그림으로-개념을-이해하는-알고리즘-2.jpg&quot; alt=&quot;함수형 프로그래밍 소개&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/egonschiele/grokking_algorithms&quot;&gt;깃허브&lt;/a&gt;에 들어갔을 때 예제를 여러 언어별로 다 제공하는 줄 알고 대단하다고 생각했는데, 그게 아니라 독자가 참여하여 예제를 커밋할 수 있도록 해둔 것이었다. 얕게나마 오픈소스에 기여하는 경험을 해볼 수 있고, 다른 독자에게 도움이 될 수 있으니 좋은 것 같다. 현재 동적 프로그래밍의 파이썬 예제가 아직 불완전하니 우리들 중 하나가 커밋할 수 있지 않을까?&lt;/p&gt;
+
+&lt;p&gt;책에서 조금 아쉬운 점은, KNN에 한 챕터를 할애해 설명을 하면서 예제 코드가 하나도 없었던 점이다. 클러스터링 예제 정도는 실을 수 있을 것 같았다. 그래도 연습문제에서 정규화문제나 샘플수를 설정하는 보편적인 방법을 설명하고 있어서 어플리케이션을 만들 때 참고할 수 있을 것 같다.&lt;/p&gt;
+
+&lt;p&gt;정리하면, 알고리즘에 거부감을 가진 사람들이나, 처음 접하는 사람에게 굉장히 좋을 입문서라는 것이다. 오늘 바로 시작하시길!&lt;/p&gt;
+
+&lt;p&gt;#알고리즘 #Algorithm #알고리즘 책 추천 #알고리즘 이해&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry><entry><title type="html">웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰</title><link href="/2017/05/07/python-scraping.html" rel="alternate" type="text/html" title="웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰" /><published>2017-05-07T00:00:00+09:00</published><updated>2017-05-07T00:00:00+09:00</updated><id>/2017/05/07/python-scraping</id><content type="html" xml:base="/2017/05/07/python-scraping.html">&lt;p&gt;&lt;img src=&quot;/assets/img/파이썬으로-웹-크롤러-만들기-1.jpg&quot; alt=&quot;파이썬으로 웹 크롤러 만들기 책&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;최근에 미니 프로젝트로 생각해 둔 것이 있었는데, 매일 뉴스 기사에서 단어를 수집할 필요가 있었다. 그리고 파이썬으로 프로젝트를 해보고 싶은 생각도 있었는데 마침 필요한 것들이 전부 있는 책이 손에 들어왔다. HTML파싱에 필요한 라이브러리부터 문서 포맷 파싱, 자연어처리, 이미지 인식, 유닛 테스트까지 다루지 않는 부분이 없는 엄청난 책이었다. 전문서를 읽으면서 가끔 묘한 느낌이 들 때가 있는데 이 책이 그랬다. 책의 두께로만 봐서는 도저히 각 챕터를 전부 다룰 수 없을 것 같은데 정말 그렇게 하고 있었다. 초보자의 관점에서 본 이야기이고, 어떤 챕터는 한 권의 책으로 심층적으로 다뤄도 모자랄 것이다. 하지만 어떤 노하우나 기술의 ‘힌트’를 적절히 배치해놓은 것을 보고 감탄하지 않을 수 없었다. 그런 점에서 이 책은 웹 프로그래밍을 막 시작한 분들에게 굉장히 매력적인 책일 것이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/파이썬으로-웹-크롤러-만들기-2.jpg&quot; alt=&quot;데이터베이스 테크닉과 모범 사례&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5장에서는 관계형 데이터베이스에서 자료를 저장하는 스키마 설계에 대해 고민하게 하는 한편, 성능적인 면에서 쿼리 응답을 빠르게 하기 위한 인덱싱기술도 설명하고 있다.&lt;/p&gt;
+
+&lt;p&gt;책이 다양한 주제에 대해서 다루고 있다보니 원하는 챕터만 찾아봐야겠다고 다짐했다. 그래서 처음에 6장은 넘어가려고 했다. 그런데 웬걸 텍스트 인코딩에 대해 설명을 하고 있어서 읽다보니 한 챕터 전체를 다 읽게 되었다. 텍스트 인코딩에 대한 개괄적 설명, csv, pdf, docx 포맷에서 데이터를 추출하는 방법이 차례로 나온다. 책을 읽는 순서는 관계가 없지만 초보자는 유용한 내용이 많으니 웬만하면 모두 읽는 것이 좋을 것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/파이썬으로-웹-크롤러-만들기-3.jpg&quot; alt=&quot;텍스트 인코딩과 인터넷&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데스크탑으로 맥을 쓰면서 멀웨어나 바이러스와는 많이 멀어졌다고 생각했는데 간과한 부분이 있었다. &lt;a href=&quot;https://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Public_servers_on_the_Internet&quot;&gt;위키&lt;/a&gt;의 유닉스 계열 서버의 점유율을 보면 가장 낮은 것도 60퍼센트를 넘는다. 크롤링을 잘못하면 저자의 말대로 악성코드를 내 컴퓨터로 초대하는 것이나 다름없다. 방어적 프로그래밍을 일깨워주는 참 좋은 책이다… 그리고 이런 ‘주의’표시가 있는 내용이 챕터 마다 있어서 책을 읽고 많이 배울 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/파이썬으로-웹-크롤러-만들기-4.jpg&quot; alt=&quot;악의적 스크립트 주의하기&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;웹 사이트를 돌아다니면서 법적 이슈가 생길 거라고 예상하는 사람이 없으니, 크롤링을 하는 것도 법적인 이슈가 없을 것이라고 예상했다. 그런 점에서 저자가 윤리적인 이슈 및 법적 이슈가 생길 수 있음을 경고해주고, 실제 사례도 소개해주고 있어서 흥미롭게 읽을 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/파이썬으로-웹-크롤러-만들기-5.jpg&quot; alt=&quot;스크레이핑의 윤리&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;curl&lt;/em&gt; 커맨드를 이용해서 HTTP 리퀘스트를 보낼 때 실패하는 사이트들이 있었는데 그 때는 어떤 정보를 통해서 확인하는지 몰랐었다. 이런 노하우를 배우다보니 내가 아직도 웹에 대해서 모르는게 굉장히 많다는 생각이 들었다…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/파이썬으로-웹-크롤러-만들기-6.jpg&quot; alt=&quot;헤더를 유용하게 사용하는 방법&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;코딩 컨벤션에 대해 잠깐 언급하고 리뷰를 마치고자 한다. 이전에는 파이썬을 간단히 로직 테스트 용도로만 사용했었다. 그래서 크게 긴 코드를 작성할 일이 없었다. 파이썬 코딩 컨벤션도 딱히 따르는 것이 없었는데 저자의 코드를 따라서 실습하다보니 홑따옴표와 쌍따옴표를 혼용해서 쓰고 있었다. 책에 파이썬 코딩 컨벤션에 대한 언급은 없기 때문에 &lt;a href=&quot;http://stackoverflow.com/questions/56011/single-quotes-vs-double-quotes-in-python&quot;&gt;스택오버플로우&lt;/a&gt;에서 관련된 내용을 찾아봤다. 기본적으로 이 논의는 가치가 없는 것(…)으로 보이지만, 참고할 만한 내용은 있었다. 펄 언어에서 보간(Interpolation)가능한 문자열과 보간하지 않는 문자열을 구분하는 문법이 있고, 그 전통이 펄 프로그래머들로부터 파이썬까지 따라왔다는 것, 혹은 (사람이 이해하는)자연어는 쌍따옴표로, 기계가 이해하는 언어는 홑따옴표로 쓴다는 규칙이 있었다. 어떤 사람은 영어의 문장부호 규칙에서 그것이 따라왔다고 보는 사람도 있었다. 쓰는 사람 마음이지만 오픈소스 프로젝트에 참여하는 것을 고려한다면 참고할 수 있을 것이다.&lt;/p&gt;
+
+&lt;p&gt;책을 읽으면서 파이썬 코드의 가독성이 정말 좋다는 것, 그리고 필요하다고 생각하는 라이브러리가 대부분 있다는 것을 느꼈다. 최근에 인기가 많은 Node.js도 라이브러리가 많이 구현돼있지만 데이터 과학쪽은 아직 파이썬의 환경이 더 잘 되있고, 초보자가 접근하기도 더 수월하다고 생각한다. 책이 얇고 다양한 주제에 대해 다루고 있기 때문에 심층적인 내용을 다룰 수 없는 것은 어쩔 수 없다. 하지만 흥미를 일으키기에 충분한 분량의 내용이 각 챕터별로 들어있다고 생각한다. 리뷰를 읽으실 초보자분들이 이 책을 통해 즐거운 코딩경험을 하시길 기대한다.&lt;/p&gt;
+
+&lt;p&gt;#웹 크롤러 #웹 크롤링 #웹 스크래이퍼 #웹 스크래이핑&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry></feed>
