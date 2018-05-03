@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>진화하는 소프트웨어 아키텍처, 대규모 분산 시스템 구축을 위한 마이크로서비스 아키텍처 구축 리뷰 | Seeking good practices</title>
+<meta name="generator" content="Jekyll v3.8.1" />
+<meta property="og:title" content="진화하는 소프트웨어 아키텍처, 대규모 분산 시스템 구축을 위한 마이크로서비스 아키텍처 구축 리뷰" />
+<meta name="author" content="Hyounggap An" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다." />
+<meta property="og:description" content="머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다." />
+<meta property="og:site_name" content="Seeking good practices" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-04-16T00:00:00+09:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Hyounggap An"},"description":"머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.","@type":"BlogPosting","headline":"진화하는 소프트웨어 아키텍처, 대규모 분산 시스템 구축을 위한 마이크로서비스 아키텍처 구축 리뷰","dateModified":"2017-04-16T00:00:00+09:00","datePublished":"2017-04-16T00:00:00+09:00","url":"/2017/04/16/microservice-architecture-book-review/","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/04/16/microservice-architecture-book-review/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Seeking good practices" /><script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73592063-3', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Seeking good practices</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/tags/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">진화하는 소프트웨어 아키텍처, 대규모 분산 시스템 구축을 위한 마이크로서비스 아키텍처 구축 리뷰</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-04-16T00:00:00+09:00" itemprop="datePublished">2017 Apr 16
+      </time></p>
+    <div class="post-tags">
+  <i class="fa fa-tags" aria-hidden="true"></i>
+  
+  
+  <a href="/tags/#book review">book review</a>
+  
+</div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/assets/img/마이크로서비스_아키텍처_구축_1.jpg" alt="마이크로서비스 아키텍처 구축 책" class="scale-with-grid-center" /></p>
+
+<p>내게 꼭 필요한 책이 나왔다고 생각했다. 실무에서 마이크로서비스 아키텍처를 사용하고 있지만 기저에 있는 이론이라던가 모범사례 또는 쉽게 빠지는 함정들에 대해서는 알지 못하고 있었다. 모놀리식 아키텍처는 수백명에 달하는 개발 조직의 커밋을 바로바로 수용하여 실제 제품에 적용하고 테스트 한 뒤 배포하는 데에 적절하지 않다. 그래서 서비스를 각 팀이 나눠서 개발하고 배포한다. 여기까지가 내가 아는 전부이다. 책에서는 마이크로서비스 아키텍처의 장점, 단점에서 시작하여 개발 원칙, 팀 구성, 배포, 모니터링, 보안 등 여러 방면에 걸쳐 고려할 사항들을 설명하고 있다.</p>
+
+<p><img src="/assets/img/마이크로서비스_아키텍처_구축_2.jpg" alt="마이크로서비스 아키텍처 구축 장점1. 레퍼런스가 풍부하다" class="scale-with-grid-center" /></p>
+
+<p>1장은 도입부라고 할 수 있는데, 각주가 많이 달려 있었다. 간단히 용어에 대해 설명하는 것부터 관련된 링크까지 다양하게 있다. 레퍼런스가 다양하게 있으니 모두 꼼꼼하게 읽는다면 책의 내용을 더 잘 이해할 수 있을 것이다. 그런데 솔직히 너무 많아서 양에 압도당했다. 나중에(개발자가 나중에 한다고 하면 안한다는 말일수도 있지만) 한 권씩 읽어야 겠다.</p>
+
+<p>마이크로서비스가 모든 것을 해결해 주지 않는다! 책에서 가장 중요한 구절 중 하나라고 생각한다. 어떤 기술이든 장단점이 있으니 우리에게 적합한지 살펴본 뒤에 적용해야 할 것이다. 관련하여 재미있는 글이 있으니 관심 있으신 분은 <a href="https://lazygyu.net/blog/hype_driven_development">링크</a> 참조.</p>
+
+<p><img src="/assets/img/마이크로서비스_아키텍처_구축_3.jpg" alt="마이크로서비스 아키텍처 구축 장점2. 많은 깨달음을 얻었다" class="scale-with-grid-center" /></p>
+
+<p>비록 내공이 부족해서 책의 내용을 100% 흡수하진 못하였지만 많이 배웠다. 콘웨이의 법칙, 기술 프로세스 관점이 아니라 비즈니스 관점에서 팀 나누기, 높은 응집성, 낮은 결합도, Blue/Green, 카나리아 등 너무 많다. 테스트, 모니터링 쪽은 말할 것도 없다. 그렇지만 ‘장애는 어디에서나 발생한다’는 말이 가장 와닿았다. 소프트웨어 장애, 네트워크 장애, 하드웨어 장애 등 마이크로서비스 아키텍처에서 염두에 둬야할 요소들이 많다는 것을 제대로 깨달았다. 넷플릭스나 구글에서 시행하는 장애 복구 테스트나 유인원 부대같은 것을 우리 회사에도 도입할 수 있을지 궁금하다. 또, 깨알같지만 AWS에서 EC2 인스턴스를 생성하고 테스트를 위해 일부 인스턴스를 종료시켰는데 다시 살아나서 테스트를 못한 경험이 있다. 그런데 그 사례가 AWS의 Failover전략 때문에 그런 것이라고 언급해서 깜짝 놀랐다.</p>
+
+<p>웹 개발에 입문한지 거의 1년이 다 되어 가는 내게 이 책은 솔직히 좀 어려웠다. <a href="http://www.hanbit.co.kr/media/books/book_view.html?p_code=B8584207882">한빛미디어</a>에서 대상 독자를 중고급으로 매겨놨는데, 고급이어도 상관없을 것 같다. 아키텍처에 관한 책이라 코드는 없다. 대신에 다이어그램이 여러번 등장한다. 대규모 분산시스템을 개발해보신 분들이나 현재 아키텍트로서 마이크로서비스 개발을 이끌고 있을 분들이라면 읽으면서 무릎을 탁 칠 내용들이 정말 많은 듯 하다. 반면에 나 같은 주니어 개발자, 톱니바퀴라고 느끼는 개발자들이 읽으면 상투적이지만 나무를 보다 숲을 보는 느낌을 가질 수 있을 거라고 생각한다. 덧붙여, 오탈자를 거의 찾아볼 수 없을 정도로 편집이 잘 됐고 번역도 매끄럽게 잘 됐으니 원서보다 번역판을 추천한다.</p>
+
+<p>#마이크로서비스 #마이크로서비스 아키텍처 구축 #대용량 시스템 구축 #마이크로서비스 책 추천</p>
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '/2017/04/16/microservice-architecture-book-review/';
+      this.page.identifier = '/2017/04/16/microservice-architecture-book-review/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://pierceh89.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2017/04/16/microservice-architecture-book-review/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seeking good practices</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Hyounggap An</li><li><a class="u-email" href="mailto:hyounggap.an@gmail.com">hyounggap.an@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/pierceh89"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">pierceh89</span></a></li><li><a href="https://www.linkedin.com/in/hyounggap-an-4991538a"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">Hyounggap An</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>rss</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
