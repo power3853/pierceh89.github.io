@@ -2,6 +2,8 @@
 layout: post
 title: 진화하는 소프트웨어 아키텍처, 대규모 분산 시스템 구축을 위한 마이크로서비스 아키텍처 구축 리뷰
 comments: true
+tags:
+- book review
 ---
 
 ![마이크로서비스 아키텍처 구축 책]({{ site.url }}/assets/img/마이크로서비스_아키텍처_구축_1.jpg){:class="scale-with-grid-center"}

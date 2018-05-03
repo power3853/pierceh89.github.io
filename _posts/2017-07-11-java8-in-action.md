@@ -2,6 +2,8 @@
 layout: post
 title: 자바 8을 얼른 적용해보고 싶다면, Java8 in action
 comments: true
+tags:
+- book review
 ---
 
 ![Java8 in action cover]({{ site.url }}/assets/img/java8_in_action_1.jpg){:class="scale-with-grid-center"}

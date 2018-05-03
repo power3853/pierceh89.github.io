@@ -2,6 +2,8 @@
 layout: post
 title: 처음 알고리즘을 입문하시는 분들에게, 헬로 코딩 그림으로 개념을 이해하는 알고리즘 리뷰
 comments: true
+tags:
+- book review
 ---
 
 ![헬로 코딩 그림으로 개념을 이해하는 알고리즘 책]({{ site.url }}/assets/img/그림으로-개념을-이해하는-알고리즘-1.jpg){:class="scale-with-grid-center"}  

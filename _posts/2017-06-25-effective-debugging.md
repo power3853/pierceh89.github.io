@@ -2,6 +2,8 @@
 layout: post
 title: 피해갈 수 없는 디버깅을 도와주는 전략서, Effective Debugging
 comments: true
+tags:
+- book review
 ---
 
 ![Effective Debugging cover]({{ site.url }}/assets/img/effective_debugging_1.jpg){:class="scale-with-grid-center"}

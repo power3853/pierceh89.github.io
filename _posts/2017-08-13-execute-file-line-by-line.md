@@ -2,6 +2,8 @@
 layout: post
 title: 파일의 라인별로 명령어 실행시키기
 comments: true
+tags:
+- shell script
 ---
 
 The original content is from [here](https://linuxprograms.wordpress.com/2010/12/14/shell-script-execute-command-every-line-file/)

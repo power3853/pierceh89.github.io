@@ -2,6 +2,8 @@
 layout: post
 title: 웹 사이트에서 원하는 정보를 추출해보자! 파이썬으로 웹 크롤러 만들기 리뷰
 comments: true
+tags:
+- book review
 ---
 
 ![파이썬으로 웹 크롤러 만들기 책]({{ site.url }}/assets/img/파이썬으로-웹-크롤러-만들기-1.jpg){:class="scale-with-grid-center"}  

@@ -2,6 +2,8 @@
 layout: post
 title: Spring Boot 이해하면서 쓰기, '실전 스프링부트 워크북'
 comments: true
+tags:
+- book review
 ---
 
 <center>
