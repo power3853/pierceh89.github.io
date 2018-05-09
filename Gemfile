@@ -6,4 +6,5 @@ gemspec
 group :jekyll_plugins do
   gem 'jekyll-katex'
   gem 'jekyll-paginate'
+  gem 'jekyll-sitemap'
 end
