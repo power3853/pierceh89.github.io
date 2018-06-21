@@ -1,5 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="https://pierceh89.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pierceh89.github.io/" rel="alternate" type="text/html" /><updated>2018-05-17T08:36:07+09:00</updated><id>https://pierceh89.github.io/</id><title type="html">Seeking good practices</title><subtitle>머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.
-</subtitle><author><name>Hyounggap An</name></author><entry><title type="html">네이버 AI 해커톤 2018 참여 후기</title><link href="https://pierceh89.github.io/2018/05/17/naver-ai-hacktathon-review/" rel="alternate" type="text/html" title="네이버 AI 해커톤 2018 참여 후기" /><published>2018-05-17T00:00:00+09:00</published><updated>2018-05-17T00:00:00+09:00</updated><id>https://pierceh89.github.io/2018/05/17/naver-ai-hacktathon-review</id><content type="html" xml:base="https://pierceh89.github.io/2018/05/17/naver-ai-hacktathon-review/">&lt;p&gt;해커톤이 끝난지 어느새 한달이 되어가서 더 뻘쭘해지기 전에 올려보려고 한다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="https://pierceh89.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pierceh89.github.io/" rel="alternate" type="text/html" /><updated>2018-06-22T02:50:50+09:00</updated><id>https://pierceh89.github.io/</id><title type="html">Seeking good practices</title><subtitle>머신러닝, 자연어처리 등 소프트웨어를 개발하면서 배운 경험을 공유하는 블로그입니다.
+</subtitle><author><name>Hyounggap An</name></author><entry><title type="html">Smallpt in scala</title><link href="https://pierceh89.github.io/2018/06/22/smallpt-in-scala/" rel="alternate" type="text/html" title="Smallpt in scala" /><published>2018-06-22T00:00:00+09:00</published><updated>2018-06-22T00:00:00+09:00</updated><id>https://pierceh89.github.io/2018/06/22/smallpt-in-scala</id><content type="html" xml:base="https://pierceh89.github.io/2018/06/22/smallpt-in-scala/">&lt;p&gt;&lt;img src=&quot;https://pierceh89.github.io/assets/img/smallpt.png&quot; alt=&quot;Sampling 300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.kevinbeason.com/smallpt/&quot;&gt;Smallpt&lt;/a&gt;는 Global Illumination Renderer다. 과제하면서 잘 이해안되는 코드를 억지로 만들어냈던 기억이 난다. 회사 다니기 시작한 이후로는 그래픽 쪽으로는 볼 시간이 거의 없었다. 초기에 스칼라를 막 배우고나서 포팅하려는 시도를 한번 했었는데 그땐 expression이나 함수형 언어에 대한 개념이 전혀 없어서 해내지 못했다.&lt;/p&gt;
+
+&lt;p&gt;지금 다시 해보니 의외로 하루 만에 코드를 옮기는 작업이 끝났다. val를 쓸지 var를 쓸지 정하거나, 함수 파라미터의 레퍼런스를 어떤 식으로 변형하는가, 그리고 if문에서 return이 함수의 리턴이 아닌 것을 어떻게 옮겨야 하는가가 고민스러운 부분이긴 했다.&lt;/p&gt;
+
+&lt;p&gt;그런 다음 해야할 작업은 ‘스칼라답게’ 코드를 변형하는 작업인데, 아직 진행중이다. 스칼라에서 즐겨 쓰는 것은 아마 튜플이 있을 것 같다. 이미지 프로세싱에서 가장 많이 보는 루프가 아마 x 좌표 루프, y 좌표 루프가 차례로 나오는 것일텐데 이 이중루프를 튜플을 이용해 하나로 바꿀 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// first version
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// do something
+&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// tuple version
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pixel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//do something
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;for loop을 먼저 C++와 같은 방식으로 구현한 다음, 튜플로 (x, y)좌표를 만들어 대체했다. 이렇게 사용하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;par&lt;/code&gt;만 추가하면 병렬 처리도 할 수 있고 가독성도 더 좋아진다.&lt;/p&gt;
+
+&lt;p&gt;그 뒤엔 subsampling해서 계산한 radiance를 모으는 루프를 &lt;code class=&quot;highlighter-rouge&quot;&gt;foldLeft&lt;/code&gt;를 사용해 대체했다.&lt;/p&gt;
+
+&lt;div class=&quot;language-scala highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foldLeft&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기서도 마찬가지로 C++ 방식으로 구현한 다음에 리팩토링을 했다. 어떤 작업을 하는지 명료해지기도 하고 픽셀마다 radiance를 0로 초기화하는 과정을 잊는 등의 실수를 할 가능성도 적어진다.&lt;/p&gt;
+
+&lt;p&gt;위에서 본 예제들은 어떻게 처리해야 할지 보이는 코드였다면, 나머지 부분은 잘 보이지 않는다.. 특히 tail recursion을 구현하는 일은 radiance 계산을 어느 정도 이해하지 않으면 할 수 없을 것 같다. Smallpt를 line by line으로 설명한 &lt;a href=&quot;http://www.kevinbeason.com/smallpt/#moreinfo&quot;&gt;슬라이드&lt;/a&gt;를 보면서 이해해보고 얼른 마무리 해야겠다.&lt;/p&gt;
+
+&lt;h3 id=&quot;link&quot;&gt;Link&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.kevinbeason.com/smallpt/&quot;&gt;Smallpt&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/pierceh89/smallpt-scala&quot;&gt;Smallpt-scala&lt;/a&gt;&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="computer graphics" /><category term="rendering" /><summary type="html"></summary></entry><entry><title type="html">네이버 AI 해커톤 2018 참여 후기</title><link href="https://pierceh89.github.io/2018/05/17/naver-ai-hacktathon-review/" rel="alternate" type="text/html" title="네이버 AI 해커톤 2018 참여 후기" /><published>2018-05-17T00:00:00+09:00</published><updated>2018-05-17T00:00:00+09:00</updated><id>https://pierceh89.github.io/2018/05/17/naver-ai-hacktathon-review</id><content type="html" xml:base="https://pierceh89.github.io/2018/05/17/naver-ai-hacktathon-review/">&lt;p&gt;해커톤이 끝난지 어느새 한달이 되어가서 더 뻘쭘해지기 전에 올려보려고 한다.&lt;/p&gt;
 
 &lt;p&gt;페이스북 &lt;a href=&quot;https://www.facebook.com/groups/TensorFlowKR/?ref=bookmarks&quot;&gt;TensorFlow KR&lt;/a&gt;를 팔로우하면서 해커톤에 대해 알게 됐는데, 그곳에서는 거의 매일 사람들이 활발하게 연구하고 공유하는 모습을 볼 수 있다. 그래서 솔직히 신청해도 내가 1라운드를 통과할 수 있을까(아니 참가 명단에 들어갈 수 있을까)하는 생각을 했었다.&lt;/p&gt;
 
@@ -191,39 +231,4 @@
 
 &lt;p&gt;아직 경력이 적어서 이 책의 전부를 이해하진 못했지만, 초보자라도 여전히 이 책에서 얻을 수 있는 것이 많다고 생각한다. 이슈 트래킹 소프트웨어를 사용하고, 어떻게 구글링해야 원하는 결과를 필터링 해낼 수 있는지, 페어 프로그래밍, 리뷰 프로세스 구축, 유닛 테스트 등 버그가 제품에 들어가지 않도록 최대한 방어하는 절차는 누구든지 이해하고 실천할 수 있기 때문이다. 그래서 이 책을 읽은 개발자들이 디버깅하는 상황을 최소한으로 마주하길 바라면서 리뷰를 마친다.&lt;/p&gt;
 
-&lt;p&gt;#이펙티브 디버깅 #Effective Debugging #Effective 시리즈 #Effective series&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry><entry><title type="html">처음 알고리즘을 입문하시는 분들에게, 헬로 코딩 그림으로 개념을 이해하는 알고리즘 리뷰</title><link href="https://pierceh89.github.io/2017/05/14/hello-coding-algorithm/" rel="alternate" type="text/html" title="처음 알고리즘을 입문하시는 분들에게, 헬로 코딩 그림으로 개념을 이해하는 알고리즘 리뷰" /><published>2017-05-14T00:00:00+09:00</published><updated>2017-05-14T00:00:00+09:00</updated><id>https://pierceh89.github.io/2017/05/14/hello-coding-algorithm</id><content type="html" xml:base="https://pierceh89.github.io/2017/05/14/hello-coding-algorithm/">&lt;p&gt;&lt;img src=&quot;https://pierceh89.github.io/assets/img/그림으로-개념을-이해하는-알고리즘-1.jpg&quot; alt=&quot;헬로 코딩 그림으로 개념을 이해하는 알고리즘 책&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;유튜브에서 &lt;em&gt;Hungarian Dance Algorithm&lt;/em&gt; 이라고 검색하면 재밌는 동영상이 나온다. 나란히 선 사람들이 헝가리 전통 음악에 맞춰 춤을 추는데, 정렬 알고리즘에 따라 자리를 서로 옮겨간다. 사람들이 이런 시도를 하는 것도 흥미롭지만 얼마나 어려우면 춤으로 가르치려는 생각을 했을까 하는 생각도 든다. 저자 역시 알고리즘을 이해하는데 어려움을 겪었고, 그림을 통해 알고리즘을 설명하는 포스팅을 시작했고, 그것이 이 책이 나오는 계기가 되었다고 한다. 여러 사람이 그러한 것처럼, 나도 이 책을 정말 재미있게 읽었다. 후반부의 어려운 부분은 역시 어렵긴 했지만, 역자의 말처럼 나도 이 책만큼 알고리즘을 재미있게 설명하는 책은 읽어보지 못한 것 같다.&lt;/p&gt;
-
-&lt;p&gt;나는 C언어로 자료구조, 알고리즘을 배웠는데 수업 자체와는 별개로 코드의 가독성이 좋지 않아 로직을 이해하는 데에 시간이 더 들었다. 반면에 파이썬으로 구현한 코드를 보면 언어적인 복잡성이 적고 코드가 명료해서 알고리즘 자체에 집중하기에 더 유리하다. 예전에 나온 책 시리즈의 이름처럼 소설처럼 코드가 읽힌다고 느꼈다. 게다가 이해하기 쉽게 그림까지 곁들이니 책을 굉장히 빨리 볼 수 있었다. 책에서 사용하는 자료구조에 대한 설명도 추가적으로 들어가 있으니 알고리즘을 배우고 싶은 누구나 이 책으로 시작할 수 있을 것 같다.&lt;/p&gt;
-
-&lt;p&gt;책 곳곳에 좋은 질문/답변이 들어가 있다. 이런 문제들을 그냥 지나치지말고 곰곰히 생각해보면 본인이 얼마나 이해했는지 알 수 있고 또 더 잘 이해할 수 있으니 꼭 풀어보도록 하자. 챕터 마지막에 있는 문제들도 같은 이유로 꼭 풀어봐야 한다. 문제가 그렇게 어렵지 않고 앞에서 배운 내용을 확인하는 정도이니 너무 부담스러워하지 않아도 된다.&lt;/p&gt;
-
-&lt;p&gt;동적 프로그래밍같은 어려운 내용은 솔직히 그림으로 봐도 어렵긴 했다. 또 최장 공통 부분 문자열의 경우, 예제코드(자바, 파이썬은 완전한 프로그램이 아님)와 설명의 격자 채움이 달라서 사람들이 헷갈릴 것 같았다. 그래도 동적 프로그래밍을 응용할 수 있는 예제들을 제공하고, 연습문제를 풀어보면서 감을 익힐 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pierceh89.github.io/assets/img/그림으로-개념을-이해하는-알고리즘-3.jpg&quot; alt=&quot;좋은 문제들&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;www.adit.io&quot;&gt;저자의 웹사이트&lt;/a&gt;를 가보면, &lt;a href=&quot;https://namu.wiki/w/Haskell&quot;&gt;하스켈&lt;/a&gt; 및 함수형 프로그래밍의 요소에 대해 설명하는 포스팅을 볼 수 있다. 역시 책에서도 하스켈로 함수형 프로그래밍에 대해서 설명하고 있다. 자바8, C++, Python이 함수형 프로그래밍을 도입하고 스칼라같은 언어가 알려지는 것을 보니 함수형 패러다임이 부상하는 것을 알 수 있다. 나도 스칼라를 사용하면서 느낀 점인데 함수형 언어를 사용하면 코드의 가독성이 더 좋아진다. 그리고 코드가 기존에 비해 짧아져 생산성이 높아지니 한번 살펴봤으면 좋겠다. 해당 페이지의 코드를 자바로 짜면 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SumFunc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// Functional programming&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;reduce()&lt;/em&gt; 함수가 두 원소를 더하는 함수를 이용해 최종적으로 리스트의 모든 원소를 더한 하나의 정수값을 리턴하게 된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pierceh89.github.io/assets/img/그림으로-개념을-이해하는-알고리즘-2.jpg&quot; alt=&quot;함수형 프로그래밍 소개&quot; class=&quot;scale-with-grid-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/egonschiele/grokking_algorithms&quot;&gt;깃허브&lt;/a&gt;에 들어갔을 때 예제를 여러 언어별로 다 제공하는 줄 알고 대단하다고 생각했는데, 그게 아니라 독자가 참여하여 예제를 커밋할 수 있도록 해둔 것이었다. 얕게나마 오픈소스에 기여하는 경험을 해볼 수 있고, 다른 독자에게 도움이 될 수 있으니 좋은 것 같다. 현재 동적 프로그래밍의 파이썬 예제가 아직 불완전하니 우리들 중 하나가 커밋할 수 있지 않을까?&lt;/p&gt;
-
-&lt;p&gt;책에서 조금 아쉬운 점은, KNN에 한 챕터를 할애해 설명을 하면서 예제 코드가 하나도 없었던 점이다. 클러스터링 예제 정도는 실을 수 있을 것 같았다. 그래도 연습문제에서 정규화문제나 샘플수를 설정하는 보편적인 방법을 설명하고 있어서 어플리케이션을 만들 때 참고할 수 있을 것 같다.&lt;/p&gt;
-
-&lt;p&gt;정리하면, 알고리즘에 거부감을 가진 사람들이나, 처음 접하는 사람에게 굉장히 좋을 입문서라는 것이다. 오늘 바로 시작하시길!&lt;/p&gt;
-
-&lt;p&gt;#알고리즘 #Algorithm #알고리즘 책 추천 #알고리즘 이해&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;#이펙티브 디버깅 #Effective Debugging #Effective 시리즈 #Effective series&lt;/p&gt;</content><author><name>Hyounggap An</name></author><category term="book review" /><summary type="html"></summary></entry></feed>
