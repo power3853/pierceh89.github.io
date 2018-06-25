@@ -24,6 +24,6 @@ NLP 공부를 하면서 참고한 사이트들이 많이 있습니다. 공부를
 - <https://brunch.co.kr/@chris-song/9>
 
 # CNN
-- [Understanding Convolutional Neural Networks for NLP](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/)]
+- [Understanding Convolutional Neural Networks for NLP](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/)
 - <https://m.blog.naver.com/PostView.nhn?blogId=rkdwnsdud555&logNo=221222217300&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F>
 
